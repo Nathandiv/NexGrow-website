@@ -1,0 +1,111 @@
+.programmes {
+  position: relative;
+  padding: 7rem 0;
+  background: var(--brand-dark);
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.section-header .section-title { margin-bottom: 1.5rem; }
+
+.programmes-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) { .programmes-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* Card */
+.prog-card {
+  position: relative;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.prog-card.featured {
+  border-color: rgba(140,198,63,0.3);
+}
+
+.featured-bar {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-green), #34d399);
+}
+
+/* Icon */
+.prog-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: #0F1A0F;
+  opacity: 0.85;
+  transition: opacity 0.4s;
+}
+
+.prog-card:hover .prog-icon { opacity: 1; }
+
+/* Popular badge */
+.popular-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--brand-green);
+  background: rgba(140,198,63,0.1);
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+/* Text */
+.prog-name {
+  font-size: 1.1875rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.prog-tagline {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(140,198,63,0.7);
+  margin-bottom: 1rem;
+}
+
+.prog-desc {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.4);
+  flex: 1;
+}
+
+/* Apply button */
+.apply-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--brand-green);
+  transition: color 0.2s;
+}
+
+.apply-btn:hover { color: var(--brand-green-light); }
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.apply-btn:hover .arrow { transform: translateX(4px); }

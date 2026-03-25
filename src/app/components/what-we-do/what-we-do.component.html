@@ -1,0 +1,29 @@
+<section id="about" class="what-we-do">
+  <div class="section-divider"></div>
+  <div class="section-glow-top"></div>
+
+  <div class="container">
+
+    <!-- Header -->
+    <div class="section-header" appReveal>
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">Unlock What's Next</h2>
+      <p class="section-subtitle" style="max-width:640px;margin:0 auto">
+        We provide a structured ecosystem that empowers individuals through programmes
+        enabling the development of sustainable businesses through practical tools,
+        guidance, and structured learning.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="pillars-grid">
+      @for (pillar of pillars; track pillar.title; let i = $index) {
+        <div class="glass-card pillar-card" appReveal [revealDelay]="i * 150">
+          <!-- <div class="pillar-icon" [innerHTML]="pillar.icon"></div> -->
+          <h3 class="pillar-title">{{ pillar.title }}</h3>
+          <p class="pillar-desc">{{ pillar.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

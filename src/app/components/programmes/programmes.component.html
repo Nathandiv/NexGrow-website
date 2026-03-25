@@ -1,0 +1,49 @@
+<section id="programmes" class="programmes">
+  <div class="section-divider"></div>
+
+  <div class="container">
+
+    <!-- Header -->
+    <div class="section-header" appReveal>
+      <span class="section-label">Our Programmes</span>
+      <h2 class="section-title">
+        Your Next Chapter
+        <span class="brand-green"> Starts Here</span>
+      </h2>
+      <p class="section-subtitle" style="max-width:520px;margin:0 auto">
+        Choose the programme that aligns with where you are — and where you want to go.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="programmes-grid">
+      @for (prog of programmes; track prog.name; let i = $index) {
+        <div
+          class="prog-card glass-card"
+          [class.featured]="prog.featured"
+          appReveal
+          [revealDelay]="i * 150"
+        >
+          @if (prog.featured) {
+            <div class="featured-bar"></div>
+          }
+
+          <div class="prog-icon" [style.background]="prog.iconGradient" [innerHTML]="prog.icon"></div>
+
+          @if (prog.featured) {
+            <span class="popular-badge">Most Popular</span>
+          }
+
+          <h3 class="prog-name">{{ prog.name }}</h3>
+          <p class="prog-tagline">{{ prog.tagline }}</p>
+          <p class="prog-desc">{{ prog.description }}</p>
+
+          <!-- <button class="apply-btn" (click)="scrollToContact()">
+            Apply Now
+            <span class="arrow">→</span>
+          </button> -->
+        </div>
+      }
+    </div>
+  </div>
+</section>

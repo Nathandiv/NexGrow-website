@@ -1,0 +1,47 @@
+<section class="hero">
+  <!-- Decorative blobs -->
+  <div class="blob blob-top-right"></div>
+  <div class="blob blob-bottom-left"></div>
+
+  <!-- Grid pattern -->
+  <div class="grid-pattern"></div>
+
+  <div class="container hero-content">
+
+    <!-- Badge -->
+    <div class="badge animate-fade-up">
+      <span class="badge-dot animate-pulse-dot"></span>
+      <span>Purpose-Driven Empowerment</span>
+    </div>
+
+    <!-- Headline -->
+    <h1 class="hero-title animate-fade-up delay-150">
+      Grow Forward —
+      <span class="hero-title-accent">At Any Stage</span>
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="hero-subtitle animate-fade-up delay-300">
+      NexGrow is a purpose-driven empowerment platform that supports young professionals
+      and retirees in transforming ideas into validated business models. Because purpose
+      does not expire — and neither does potential.
+    </p>
+
+    <!-- CTA buttons -->
+    <div class="hero-ctas animate-fade-up delay-450">
+      <button class="btn-primary" (click)="scrollTo('#contact')">Start Your Journey</button>
+      <button class="btn-secondary" (click)="scrollTo('#about')">Learn More</button>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator animate-fade-up delay-1200">
+    <button (click)="scrollTo('#about')" class="scroll-btn">
+      <span class="scroll-label">Scroll</span>
+      <svg class="animate-bounce-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/>
+      </svg>
+    </button>
+  </div>
+</section>

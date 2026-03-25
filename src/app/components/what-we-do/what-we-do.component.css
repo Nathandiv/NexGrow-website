@@ -1,0 +1,60 @@
+.what-we-do {
+  position: relative;
+  padding: 7rem 0;
+  background: var(--brand-dark);
+  overflow: hidden;
+}
+
+.section-glow-top {
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 800px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(140,198,63,0.2), transparent);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.section-header .section-title { margin-bottom: 1.5rem; }
+
+.pillars-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) { .pillars-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.pillar-card {
+  padding: 2.5rem;
+}
+
+.pillar-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.875rem;
+  background: rgba(140,198,63,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: var(--brand-green);
+  transition: background 0.5s;
+}
+
+.pillar-card:hover .pillar-icon { background: rgba(140,198,63,0.15); }
+
+.pillar-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.pillar-desc {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.45);
+}

@@ -1,0 +1,48 @@
+<nav class="navbar" [class.scrolled]="scrolled()">
+  <div class="container nav-inner">
+
+    <!-- Logo -->
+    <a class="logo" (click)="scrollTop()">
+      <img
+        src="https://media.base44.com/images/public/user_693d92fe1954262d7431fc56/d5d2da660_bb8f1b63-91c6-41e3-a04b-e94305a84ae3.jpeg"
+        alt="NexGrow Logo"
+        class="logo-img"
+      />
+      <span class="logo-text">
+        <span class="brand-green">NEX</span><span>GROW</span>
+      </span>
+    </a>
+
+    <!-- Desktop links -->
+    <div class="desktop-links">
+      @for (link of navLinks; track link.href) {
+        <button class="nav-link" (click)="scrollTo(link.href)">{{ link.label }}</button>
+      }
+      <button class="btn-primary nav-cta" (click)="scrollTo('#contact')">Get Started</button>
+    </div>
+
+    <!-- Mobile toggle -->
+    <button class="mobile-toggle" (click)="toggleMobile()" aria-label="Toggle menu">
+      @if (mobileOpen()) {
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      } @else {
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      }
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  @if (mobileOpen()) {
+    <div class="mobile-menu animate-slide-down">
+      @for (link of navLinks; track link.href) {
+        <button class="mobile-link" (click)="scrollTo(link.href)">{{ link.label }}</button>
+      }
+      <button class="btn-primary mobile-cta" (click)="scrollTo('#contact')">Get Started</button>
+    </div>
+  }
+</nav>

@@ -1,0 +1,27 @@
+<section id="benefits" class="benefits">
+  <div class="section-divider"></div>
+  <div class="glow-right"></div>
+
+  <div class="container">
+
+    <!-- Header -->
+    <div class="section-header" appReveal>
+      <span class="section-label">What You Gain</span>
+      <h2 class="section-title">
+        Everything You Need to
+        <span class="brand-green"> Thrive</span>
+      </h2>
+    </div>
+
+    <!-- Cards -->
+    <div class="benefits-grid">
+      @for (benefit of benefits; track benefit.title; let i = $index) {
+        <div class="benefit-card glass-card" appReveal [revealDelay]="i * 100">
+          <!-- <div class="benefit-icon" [innerHTML]="benefit.icon"></div> -->
+          <h3 class="benefit-title">{{ benefit.title }}</h3>
+          <p class="benefit-desc">{{ benefit.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
