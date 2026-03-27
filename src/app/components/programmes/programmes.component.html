@@ -28,7 +28,13 @@
             <div class="featured-bar"></div>
           }
 
-          <div class="prog-icon" [style.background]="prog.iconGradient" [innerHTML]="prog.icon"></div>
+          <div class="prog-icon" [style.background]="prog.iconGradient">
+            <img
+              [src]="prog.icon"
+              alt="icon"
+              style="object-fit: cover; object-position: center; width: 100%; height: 100%;"
+            />
+          </div>
 
           @if (prog.featured) {
             <span class="popular-badge">Most Popular</span>
