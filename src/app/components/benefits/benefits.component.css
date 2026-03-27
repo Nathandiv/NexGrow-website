@@ -3,6 +3,7 @@
   padding: 7rem 0;
   background: var(--brand-dark-mid);
   overflow: hidden;
+  margin-top: -120px;
 }
 
 .glow-right {
