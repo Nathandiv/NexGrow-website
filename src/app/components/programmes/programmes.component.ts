@@ -20,7 +20,7 @@ interface Programme {
 export class ProgrammesComponent {
   programmes: Programme[] = [
     {
-      icon: 'image1.svg',
+      icon: 'image3.svg',
       iconGradient: 'linear-gradient(135deg, #fb923c, #8CC63F)',
       name: 'Side Hustle Igniter',
       tagline: 'Spark Your Idea',
@@ -35,7 +35,7 @@ export class ProgrammesComponent {
       featured: true,
     },
     {
-      icon: 'image3.svg',
+      icon: 'image1.svg',
       iconGradient: 'linear-gradient(135deg, #A8D86A, #fde047)',
       name: 'NexGrow Legacy',
       tagline: 'Rediscover Your Purpose',

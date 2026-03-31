@@ -19,8 +19,8 @@ export class NavbarComponent {
 
   navLinks: NavLink[] = [
     { label: 'About',      href: '#about' },
-    { label: 'Benefits',   href: '#benefits' },
     { label: 'Programmes', href: '#programmes' },
+    { label: 'Benefits',   href: '#benefits' },
     { label: 'Contact',    href: '#contact' },
   ];
 
