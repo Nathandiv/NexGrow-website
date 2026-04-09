@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { RevealDirective } from '../../directives/reveal.directive';
 
 interface ContactForm {
@@ -39,34 +39,44 @@ export class ContactComponent {
     }
   }
 
-   async submitForm(form: NgForm) {
-    if (form.invalid) return;
 
-    const formData = new FormData();
-    formData.append('access_key', '09fab436-101e-409e-976b-c88c17a97cd2');
-    formData.append('subject', 'New Subscriber');
-    formData.append('from_name', 'Website Footer');
-    formData.append('email', form.value.email);
 
-    try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formData
-      });
+async submitForm(ngForm: NgForm) {
+  if (ngForm.invalid) return;
 
-      const result = await response.json();
-      console.log('Subscription response:', result);
+  const formData = new FormData();
+  formData.append('access_key', '18155a87-df5c-4465-b923-8cb64eb3e1b3');
+  formData.append('subject', 'New Application - NexGrow');
+  formData.append('from_name', 'NexGrow Website');
+  
+  // Add all form fields
+  formData.append('name', this.form.name);
+  formData.append('surname', this.form.surname);
+  formData.append('email', this.form.email);
+  formData.append('programme', this.form.programme);
 
-      if (result.success) {
-        this.success = true;
-        form.resetForm();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else {
-        alert(` Subscription failed: ${result.message}`);
-      }
-    } catch (error) {
-      console.error('Subscription error:', error);
-      alert('Network error. Please try again later.');
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    });
+
+    const result = await response.json();
+    console.log('Application response:', result);
+
+    if (result.success) {
+      this.submitted.set(true);
+      ngForm.resetForm();
+      this.form = { name: '', surname: '', email: '', programme: '' }; // Reset model too
+      
+      // Optional: scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      alert(`Submission failed: ${result.message || 'Please try again.'}`);
     }
+  } catch (error) {
+    console.error('Submission error:', error);
+    alert('Network error. Please try again later.');
   }
+}
 }
