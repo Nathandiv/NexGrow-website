@@ -38,4 +38,35 @@ export class ContactComponent {
       this.submitted.set(true);
     }
   }
+
+   async submitForm(form: NgForm) {
+    if (form.invalid) return;
+
+    const formData = new FormData();
+    formData.append('access_key', '09fab436-101e-409e-976b-c88c17a97cd2');
+    formData.append('subject', 'New Subscriber');
+    formData.append('from_name', 'Website Footer');
+    formData.append('email', form.value.email);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+
+      const result = await response.json();
+      console.log('Subscription response:', result);
+
+      if (result.success) {
+        this.success = true;
+        form.resetForm();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        alert(` Subscription failed: ${result.message}`);
+      }
+    } catch (error) {
+      console.error('Subscription error:', error);
+      alert('Network error. Please try again later.');
+    }
+  }
 }
