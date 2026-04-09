@@ -1,0 +1,27 @@
+# This is a basic workflow that is manually triggered
+
+name: Generate sitemap
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  sitemap_job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Generate the sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://nexgrow.co.za
+      - name: Commit and push if changed
+        run: |
+          if [[ `git status --porcelain sitemap.xml` ]]; then
+            git config --global user.name 'github-actions'
+            git config --global user.email 'github-actions@github.com'
+            git add sitemap.xml
+            git commit -m "Automated sitemap update"
+            git push
+          fi
