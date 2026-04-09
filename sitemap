@@ -1,0 +1,12 @@
+// app/sitemap.js
+export default function sitemap() {
+  return [
+    {
+      url: 'https://github.io',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 1,
+    },
+    // Add dynamic routes by fetching data here
+  ]
+}
