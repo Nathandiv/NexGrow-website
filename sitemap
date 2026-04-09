@@ -2,7 +2,7 @@
 export default function sitemap() {
   return [
     {
-      url: 'https://github.io',
+      url: 'https://nexgrow.co.za',
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 1,
