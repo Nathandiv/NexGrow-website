@@ -1,9 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://nexgrow.co.za/</loc>
-    <lastmod>2026-04-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<url>
+<loc>https://nexgrow.co.za/src/</loc>
+<lastmod>2026-03-25T16:35:38+02:00</lastmod>
+</url>
+<url>
+<loc>https://nexgrow.co.za/src/app/app.component.html</loc>
+<lastmod>2026-04-09T19:39:31+02:00</lastmod>
+</url>
+<url>
+<loc>https://nexgrow.co.za/src/app/components/benefits/benefits.component.html</loc>
+<lastmod>2026-03-25T16:20:16+02:00</lastmod>
+</url>
+<url>
+<loc>https://nexgrow.co.za/src/app/components/contact/contact.component.html</loc>
+<lastmod>2026-04-10T00:13:12+02:00</lastmod>
+</url>
+<url>
+<loc>https://nexgrow.co.za/src/app/components/footer/footer.component.html</loc>
+<lastmod>2026-03-27T15:14:57+02:00</lastmod>
+</url>
+<url>
+<loc>https://nexgrow.co.za/src/app/components/hero/hero.component.html</loc>
+<lastmod>2026-03-27T11:16:03+02:00</lastmod>
+</url>
+<url>
+<loc>https://nexgrow.co.za/src/app/components/navbar/navbar.component.html</loc>
+<lastmod>2026-03-25T16:20:16+02:00</lastmod>
+</url>
+<url>
+<loc>https://nexgrow.co.za/src/app/components/programmes/programmes.component.html</loc>
+<lastmod>2026-03-27T15:14:57+02:00</lastmod>
+</url>
+<url>
+<loc>https://nexgrow.co.za/src/app/components/what-we-do/what-we-do.component.html</loc>
+<lastmod>2026-03-27T12:20:12+02:00</lastmod>
+</url>
 </urlset>
