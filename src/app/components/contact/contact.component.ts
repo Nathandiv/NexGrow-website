@@ -44,8 +44,9 @@ export class ContactComponent {
 async submitForm(ngForm: NgForm) {
   if (ngForm.invalid) return;
 
+  
   const formData = new FormData();
-  formData.append('access_key', '18155a87-df5c-4465-b923-8cb64eb3e1b3');
+  formData.append('access_key', '0ce97a11-9a0a-45e4-a188-f490a42b85cc');
   formData.append('subject', 'New Application - NexGrow');
   formData.append('from_name', 'NexGrow Website');
   
